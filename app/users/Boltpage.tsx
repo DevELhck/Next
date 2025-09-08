@@ -225,19 +225,19 @@ export default function App() {
         <div className="flex flex-wrap justify-center gap-6 max-w-5xl">
           <BoltCard
             title="Bloomberg"
-            descriptions="Bolt raises $100M in latest funding round."
+            desc="Bolt raises $100M in latest funding round."
             date="Aug 8, 2025"
             image="/images/bloomberg.jpg"
           />
           <BoltCard
             title="TechCrunch"
-            descriptions="Bolt expands into new European markets."
+            desc="Bolt expands into new European markets."
             date="Aug 7, 2025"
             image="/images/techcrunch.jpg"
           />
           <BoltCard
             title="Forbes"
-            descriptions="Why Bolt is the fastest-growing mobility platform."
+            desc="Why Bolt is the fastest-growing mobility platform."
             date="Aug 5, 2025"
             image="/images/forbes.jpg"
           />
