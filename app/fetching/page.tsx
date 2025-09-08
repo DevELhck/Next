@@ -1,5 +1,12 @@
+
+export const dynamic = "force-dynamic"
+
+
 import { Product } from "@/types"
 import Image from "next/image"
+
+
+
 
 const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params
