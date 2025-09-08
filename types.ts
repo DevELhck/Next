@@ -32,11 +32,10 @@ export interface User {
 }
 
 
-
 export interface UpdateProduct {
-	title?: string,
-	description?: string,
-	price?: number,
-	id?: string
+  id: string
+  title?: string
+  description?: string
+  price?: number
 }
 

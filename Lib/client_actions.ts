@@ -3,6 +3,8 @@
 import ProductModel from "@/models/product";
 import dbConnect from "./dbConnect";
 
+
+
 interface UpdateProduct {
 	title: string,
 	description: string,

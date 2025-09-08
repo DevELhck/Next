@@ -1,15 +1,11 @@
 "use client"
 
 import { getProduct, updateClientProduct } from "@/Lib/client_actions"
-import  {UpdateProduct} from "@/types"
+import { UpdateProduct } from "@/types"
 import { useParams, useRouter } from "next/navigation"
 import { ChangeEvent, FormEvent, useEffect, useState } from "react"
 
 const ProductForm = () => {
-  // const [state, action, pending] = useActionState(updateClientProduct, {
-  //   success: false,
-  // })
-
   const router = useRouter()
   const { id } = useParams()
   const [productForm, setProductForm] = useState<UpdateProduct>({
@@ -23,10 +19,10 @@ const ProductForm = () => {
     const fetchProduct = async () => {
       const product = await getProduct({ id: String(id) })
       setProductForm({
-        price: product?.price,
-        description: product?.description,
-        title: product?.title,
-        id: String(product?._id),
+        price: product?.price ?? 0,
+        description: product?.description ?? "",
+        title: product?.title ?? "",
+        id: String(product?._id ?? ""),
       })
     }
 
@@ -45,7 +41,7 @@ const ProductForm = () => {
     const { name, value } = e.target
     setProductForm((previous) => ({
       ...previous,
-      [name]: value,
+      [name]: name === "price" ? Number(value) : value, // ensure price is a number
     }))
   }
 
